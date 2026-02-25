@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "Giga Mail Productivity Tools",
+  "description": "Enhance GMail application with additional functionality",
+  "version": "1.0.0",
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "*.png"
+      ],
+      "matches": [
+        "https://mail.google.com/*"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icons/ex16.png",
+    "32": "icons/ex32.png",
+    "64": "icons/ex64.png",
+    "128": "icons/ex128.png"
+  },
+  "action": {
+    "default_popup": "config.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "serviceWorker.js"
+  },
+  "permissions": [
+    "scripting",
+    "storage",
+    "tabs",
+    "activeTab",
+    "webRequest",
+    "identity"
+  ],
+  "oauth2": {
+    "client_id": "880586900679-32n14qqlomdo0j8knnaikgc1a42mmdou.apps.googleusercontent.com",
+    "scopes": [
+      "https://mail.google.com/",
+      "https://www.googleapis.com/auth/gmail.modify"
+    ]
+  },
+  "host_permissions": [
+    "https://mail.google.com/"
+  ]
+}

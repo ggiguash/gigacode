@@ -1,0 +1,27 @@
+{
+  "name": "gmail-productivity-tools",
+  "version": "1.0.0",
+  "description": "Giga Mail Productivity Tools",
+  "private": true,
+  "browserslist": "last 4 Chrome versions",
+  "scripts": {
+    "clean": "rm -rf dist node_modules",
+    "start": "webpack --config webpack.dev.js --watch",
+    "build": "webpack --config webpack.dev.js",
+    "build-prod": "webpack --config webpack.prod.js"
+  },
+  "dependencies": {
+    "@inboxsdk/core": "^2.1.64",
+    "node": "^22.8.0",
+    "start": "^5.1.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "node": "^22.8.0",
+    "rimraf": "^6.0.1",
+    "source-map-loader": "^5.0.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-merge": "^6.0.1"
+  }
+}
