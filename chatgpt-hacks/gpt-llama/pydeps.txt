@@ -1,0 +1,4 @@
+llama-index
+pypdf
+python-bidi
+python-dotenv

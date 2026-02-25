@@ -1,0 +1,6 @@
+faiss-cpu
+gpt4all
+langchain
+pdf2image
+sentence_transformers
+unstructured
